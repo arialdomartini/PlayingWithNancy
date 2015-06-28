@@ -3,7 +3,7 @@ using Nancy;
 
 namespace PlayingWithNancy
 {
-    public class Program : NancyModule
+    public class Program
     {
         static void Main(string[] args) {
             Console.Write("Starting server...");
@@ -11,11 +11,5 @@ namespace PlayingWithNancy
             server.Start();
             Console.Read();
         }
-
-        public Program()
-        {
-            Get["/"] = _ => { return "Nancy says hello!"; };
-        }
     }
-
 }
