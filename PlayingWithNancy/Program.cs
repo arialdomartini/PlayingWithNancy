@@ -9,6 +9,7 @@ namespace PlayingWithNancy
             Console.Write("Starting server...");
             var server = new Nancy.Hosting.Self.NancyHost(new Uri("http://localhost:8282"));
             server.Start();
+            StaticConfiguration.DisableErrorTraces = false;
             Console.Read();
         }
     }
